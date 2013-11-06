@@ -62,11 +62,11 @@ public final class PagingCriteria {
      * @param displayStart the display start
      * @param pageNumber   the page number
      */
-    private PagingCriteria(int displaySize
-            , int displayStart
+    private PagingCriteria(int displayStart
+            , int displaySize
             , int pageNumber) {
-        this.displaySize = displaySize;
         this.displayStart = displayStart;
+        this.displaySize = displaySize;
         this.pageNumber = pageNumber;
         this.searchFields = Lists.newArrayListWithCapacity(0);
         this.sortFields = Lists.newArrayListWithCapacity(0);

@@ -102,12 +102,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge</groupId>
-            <artifactId>jtds</artifactId>
-            <version>1.2.5</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.16</version>
@@ -147,7 +141,7 @@
         <dependency>
             <groupId>io.github.yfyang</groupId>
             <artifactId>sparta-helper</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
         </dependency>
 
     </dependencies>
@@ -185,10 +179,10 @@
                     <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
                     <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
-                    <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+                    <branch>refs/heads/master</branch>                       <!-- remote branch name -->
                     <includes><include>**/*</include></includes>
-                    <repositoryName>mybatis-pagination</repositoryName>      <!-- github repo name -->
-                    <repositoryOwner>yfyang</repositoryOwner>    <!-- github username  -->
+                    <repositoryName>cloudfss-repository</repositoryName>      <!-- github repo name -->
+                    <repositoryOwner>jerryofouc</repositoryOwner>    <!-- github username  -->
                 </configuration>
                 <executions>
                     <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
@@ -205,7 +199,7 @@
     <repositories>
         <repository>
             <id>yfyang-mvn-repo</id>
-            <url>https://raw.github.com/yfyang/sparta-helpers/mvn-repo/</url>
+            <url>https://github.com/yfyang/sparta-helper/raw/mvn-repo/</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
