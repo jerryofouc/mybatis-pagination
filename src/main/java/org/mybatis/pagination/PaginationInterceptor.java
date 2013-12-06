@@ -99,7 +99,7 @@ public class PaginationInterceptor implements Interceptor, Serializable {
         // rowBuounds has offset.
         if (rowBounds.getOffset() == RowBounds.NO_ROW_OFFSET) {
             if (pageRequest != null) {
-                return new RowBounds(pageRequest.getDisplayStart(), pageRequest.getDisplaySize());
+                return new RowBounds(pageRequest.getDisplayStart()+pageRequest.getPageNumber()*pageRequest.getDisplaySize(),pageRequest.getDisplaySize());
             }
         }
         return rowBounds;

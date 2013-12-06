@@ -80,13 +80,13 @@ public final class PagingCriteria {
      * @param pageNumber   the page number
      * @param sortFields   the sort fields
      */
-    private PagingCriteria(int displaySize
-            , int displayStart
+    private PagingCriteria(int displayStart
+            , int displaySize
             , int pageNumber
             , List<SortField> sortFields) {
         this.sortFields = sortFields;
-        this.displaySize = displaySize;
         this.displayStart = displayStart;
+        this.displaySize = displaySize;
         this.pageNumber = pageNumber;
         this.searchFields = Lists.newArrayListWithCapacity(0);
     }
